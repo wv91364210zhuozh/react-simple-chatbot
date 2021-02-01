@@ -90,8 +90,8 @@
     "flatted": "^2.0.0",
     "prop-types": "^15.6.0",
     "random-id": "0.0.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "peerDependencies": {
     "styled-components": "^4.0.0",
