@@ -5,7 +5,7 @@
   "main": "dist/react-simple-chatbot.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint lib/*.jsx",
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect && npm run build",
     "prepush": "npm run lint && npm run test:coverage",
     "start": "./node_modules/.bin/webpack-dev-server --inline --content-base build/",
     "prettier-watch": "onchange '**/*.js' '**/*.jsx' -- prettier --write {{changed}}",
@@ -14,7 +14,8 @@
     "test:watch": "npm test -- --watch",
     "test:coverage": "nyc npm test",
     "build": "./node_modules/.bin/webpack --config webpack.config.prod.js -p",
-    "analyze": "BUNDLE_ANALYZE=true ./node_modules/.bin/webpack --config webpack.config.prod.js -p"
+    "analyze": "BUNDLE_ANALYZE=true ./node_modules/.bin/webpack --config webpack.config.prod.js -p",
+    "snyk-protect": "snyk-protect"
   },
   "files": [
     "dist"
@@ -85,17 +86,19 @@
   "dependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "onchange": "^5.2.0",
+    "onchange": "^6.0.0",
     "prettier": "^1.16.4",
     "flatted": "^2.0.0",
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.6.2",
     "random-id": "0.0.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "@snyk/protect": "latest"
   },
   "peerDependencies": {
     "styled-components": "^4.0.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
-  }
+  },
+  "snyk": true
 }
