@@ -85,7 +85,7 @@
   "dependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "onchange": "^5.2.0",
+    "onchange": "^6.0.0",
     "prettier": "^1.16.4",
     "flatted": "^2.0.0",
     "prop-types": "^15.6.0",
